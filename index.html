@@ -25,6 +25,7 @@
                     <li><a href="#services" data-lang="nav_services">Xizmatlar</a></li>
                     <li><a href="#order" data-lang="nav_order">Buyurtma Berish</a></li>
                     <li><a href="#faq" data-lang="nav_faq">FAQ</a></li>
+                    <li><a href="#contact" data-lang="nav_contact">Kontaktlar</a></li>
                 </ul>
             </nav>
 
@@ -104,19 +105,48 @@
         </div>
     </section>
 
-    <!-- 4. Buyurtma Berish (Forma va Jonli Kamera) -->
+    <!-- 4. Buyurtma Berish -->
     <section id="order" class="order-section">
         <div class="container order-grid">
-            <!-- Jonli kamera ulanadigan joy -->
-            <div class="live-stream-box">
-                <h3 data-lang="live_title">Jonli Monitoring Markazi</h3>
-                <div class="video-container">
-                    <span class="live-badge">LIVE</span>
-                    <video id="live-video-player" autoplay muted playsinline controls>
-                        <source
-                            src="https://assets.mixkit.co/videos/preview/mixkit-security-camera-of-a-facility-at-night-41525-large.mp4"
-                            type="video/mp4">
-                    </video>
+            <div class="benefits-box">
+                <h3 data-lang="benefits_title">Xizmat paketi tarkibi</h3>
+                <p class="benefits-subtitle" data-lang="benefits_subtitle">Biz bilan shartnoma tuzganingizda
+                    quyidagilarga mutlaqo bepul ega bo'lasiz:</p>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <div class="benefit-info">
+                        <h4 data-lang="benefit1_h">Bepul loyihalash</h4>
+                        <p data-lang="benefit1_p">Mutaxassislarimiz ob'ektni o'rganib, kameralar uchun eng maqbul
+                            nuqtalarni chizib berishadi.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="benefit-info">
+                        <h4 data-lang="benefit2_h">Intellektual Tizim (AI)</h4>
+                        <p data-lang="benefit2_p">Yuzni aniqlash, harakat datchiklari va smart-notifikatsiya tizimi
+                            ulanadi.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-cloud"></i></div>
+                    <div class="benefit-info">
+                        <h4 data-lang="benefit3_h">Bulutli Saqlash xizmati</h4>
+                        <p data-lang="benefit3_p">Videolar nafaqat yozish qurilmasiga, balki xavfsiz onlayn serverga ham
+                            saqlanadi.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="benefit-info">
+                        <h4 data-lang="benefit4_h">Rasmiy Kafolat</h4>
+                        <p data-lang="benefit4_p">Har bir o'rnatilgan tizim uchun 1 yildan 3 yilgacha texnik va
+                            uskunaviy kafolat.</p>
+                    </div>
                 </div>
             </div>
 
@@ -141,7 +171,7 @@
         </div>
     </section>
 
-    <!-- 5. FAQ (Yig'ilib-yoyiladigan savol-javoblar) -->
+    <!-- 5. FAQ -->
     <section id="faq" class="faq-section container">
         <h2 class="section-title" data-lang="faq_main_title">Ko'p Beriladigan Savollar</h2>
         <div class="accordion">
@@ -177,23 +207,99 @@
                 </div>
             </div>
         </div>
+        <!-- Muvaffaqiyatli yuborilgandagi oyna va hiralashish foni -->
+        <div id="success-overlay" class="success-overlay">
+            <div class="success-card">
+                <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3 data-lang="popup_success_title">Muvaffaqiyatli yuborildi!</h3>
+                <p data-lang="popup_success_desc">Tez orada operatorlarimiz siz bilan bog'lanishadi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Yangi: 6. Biz bilan Bog'lanish (Kontaktlar) bo'limi -->
+
+    <section id="contact" class="contact-section container">
+        <h2 class="section-title" data-lang="contact_main_title">Biz bilan Bog'lanish</h2>
+        <div class="contact-grid-main">
+            <!-- Raxbariyat Ma'lumotlari -->
+            <div class="contact-card-info">
+                <h3 data-lang="team_title"><i class="fa-solid fa-users-gear"></i> Mas'ul shaxslar</h3>
+                <div class="info-item-sub">
+                    <div class="info-sub-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div>
+                        <h4 data-lang="boss_role">Kompaniya rahbari</h4>
+                        <p class="highlight-name">Mahmudjon</p>
+                    </div>
+                </div>
+                <div class="info-item-sub">
+                    <div class="info-sub-icon"><i class="fa-solid fa-user-gear"></i></div>
+                    <div>
+                        <h4 data-lang="admin_role">Bosh Administrator</h4>
+                        <p class="highlight-name">Dasturchi / Texnik rahbar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aloqa kanallari, Manzil va Ish tartibi -->
+            <div class="contact-card-info">
+                <h3 data-lang="channels_title"><i class="fa-solid fa-address-book"></i> To'g'ridan-to'g'ri Aloqa</h3>
+                <div class="info-item-sub">
+                    <div class="info-sub-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <div>
+                        <h4 data-lang="contact_phone">Telefon raqam</h4>
+                        <p><a href="tel:+998941668809" class="contact-link-direct">+998 (94) 166 88 09</a></p>
+                    </div>
+                </div>
+                <div class="info-item-sub">
+                    <div class="info-sub-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@hrolan.uz</p>
+                    </div>
+                </div>
+                <div class="info-item-sub">
+                    <div class="info-sub-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4 data-lang="work_time">Ish tartibi</h4>
+                        <p data-lang="work_hours">Dushanba - Shanba, 09:00 - 18:00</p>
+                    </div>
+                </div>
+                <div class="info-item-sub">
+                    <div class="info-sub-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div>
+                        <h4 data-lang="address_title">Ofis manzili</h4>
+                        <p data-lang="address_text">Toshkent shahri, Chilonzor tumani</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ijtimoiy Tarmoqlar Linklari -->
+            <div class="contact-card-info center-content">
+                <h3 data-lang="social_title"><i class="fa-solid fa-share-nodes"></i> Ijtimoiy Tarmoqlarimiz</h3>
+                <p class="social-desc" data-lang="social_desc">Yangiliklar va jonli jarayonlarni ijtimoiy
+                    tarmoqlarimizda kuzatib boring:</p>
+                <div class="social-buttons-box">
+                    <a href="https://t.me/mc122009" target="_blank" class="social-btn-item telegram"><i
+                            class="fa-brands fa-telegram"></i> Telegram</a>
+                    <a href="https://instagram.com/mc122009" target="_blank" class="social-btn-item instagram"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://youtube.com/@mahmudcoder" target="_blank" class="social-btn-item youtube"><i
+                            class="fa-brands fa-youtube"></i> YouTube</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2026 HR-OLAN. All rights reserved.</p>
-            <span class="social-icons">
-                <!-- Telefon -->
-                <a href="tel:+998941668809"><i class="fa-solid fa-phone"></i> +998 (94) 166 88 09</a>
-
-                <!-- Telegram -->
-                <a href="https://t.me/mc122009" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-
-                <!-- Instagram -->
-                <a href="https://instagram.com/mc122009" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-
-                <!-- YouTube -->
-                <a href="https://youtube.com/@mahmudcoder" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            </span>
+        <span class="social-icons">
+            <span>programmer: </span>
+            <a href="tel:+998941668809"><i class="fa-solid fa-phone"></i> +998 (94) 166 88 09</a>
+            <a href="https://t.me/mc122009" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://instagram.com/mc122009" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@mahmudcoder" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </span>
     </footer>
 
     <script src="script.js"></script>

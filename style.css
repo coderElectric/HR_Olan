@@ -1,5 +1,5 @@
 /* Umumiy o'zgaruvchilar va bazaviy stillar */
-* {
+* { 
     margin: 0; padding: 0; box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
     scroll-behavior: smooth;
@@ -83,10 +83,14 @@ header {
 /* Order / Forms */
 .order-section { background: var(--bg-secondary); padding: 60px 0; margin-top: 50px; }
 .order-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.video-container { position: relative; width: 100%; height: 320px; background: #000; border-radius: 8px; overflow: hidden; }
-.video-container video { width: 100%; height: 100%; object-fit: cover; }
-.live-badge { position: absolute; top: 15px; left: 15px; background: #ef4444; color: #fff; padding: 4px 8px; font-size: 11px; font-weight: bold; border-radius: 4px; z-index: 5; animation: blink 1.5s infinite; }
-@keyframes blink { 50% { opacity: 0.4; } }
+
+/* Yangi kiritilgan afzalliklar qismi uchun stillar */
+.benefits-box h3 { font-size: 24px; margin-bottom: 10px; color: var(--text-primary); }
+.benefits-subtitle { color: var(--text-secondary); margin-bottom: 25px; font-size: 15px; }
+.benefit-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
+.benefit-icon { background: rgba(59, 130, 246, 0.1); color: var(--accent); padding: 12px; border-radius: 8px; font-size: 20px; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; flex-shrink: 0; }
+.benefit-info h4 { font-size: 16px; color: var(--text-primary); margin-bottom: 4px; }
+.benefit-info p { font-size: 14px; color: var(--text-secondary); }
 
 .contact-box input, .contact-box textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid var(--text-secondary); border-radius: 6px; background: var(--bg-primary); color: var(--text-primary); }
 
@@ -100,7 +104,31 @@ header {
 /* Akkordeon ochilgandagi holat */
 .accordion-item.active .accordion-header i { transform: rotate(180deg); }
 .accordion-item.active .accordion-content { max-height: 200px; padding: 20px; }
+/* Yangi: Kontaktlar (Contact Section) elementlari */
+.contact-section { padding: 60px 0 30px; }
+.contact-grid-main { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
+.contact-card-info { background: var(--bg-secondary); padding: 30px; border-radius: 8px; box-shadow: var(--card-shadow); display: flex; flex-direction: column; justify-content: flex-start; }
+.contact-card-info h3 { font-size: 20px; margin-bottom: 25px; color: var(--accent); border-bottom: 2px solid rgba(59, 130, 246, 0.1); padding-bottom: 10px; }
+.info-item-sub { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+.info-sub-icon { background: rgba(59, 130, 246, 0.08); color: var(--accent); width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.info-item-sub h4 { font-size: 14px; color: var(--text-secondary); margin-bottom: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+.highlight-name { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.contact-link-direct { color: var(--text-primary); text-decoration: none; font-weight: 600; }
+.contact-link-direct:hover { color: var(--accent); }
 
+/* Ijtimoiy tarmoq tugmalari */
+.social-desc { font-size: 15px; color: var(--text-secondary); margin-bottom: 20px; }
+.social-buttons-box { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+.social-btn-item { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 12px; border-radius: 6px; text-decoration: none; color: #fff; font-weight: bold; font-size: 15px; transition: transform 0.2s, opacity 0.2s; text-align: center; }
+.social-btn-item:hover { transform: translateY(-2px); opacity: 0.9; }
+.social-btn-item.telegram { background: #24A1DE; }
+.social-btn-item.instagram { background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); }
+.social-btn-item.youtube { background: #FF0000; }
+
+/* Mobile Responsive qo'shimcha tuzatish */
+@media (max-width: 768px) {
+    .contact-grid-main { grid-template-columns: 1fr; }
+}
 footer { background: #0f172a; text-align: center; padding: 20px; color: #94a3b8; font-size: 14px; }
 
 /* Mobile Responsive */
@@ -111,4 +139,70 @@ footer { background: #0f172a; text-align: center; padding: 20px; color: #94a3b8;
     .menu-toggle { display: block; }
     .about-grid, .order-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 30px; }
+}
+/* Muvaffaqiyat oynasi va Orqa fonni hiralashtirish (Overlay) */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Orqa fon qorayishi */
+    backdrop-filter: blur(8px); /* Silliq hiralashish */
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Hamma elementlardan ustida turadi */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+/* Overlay faollashganda */
+.success-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Oynaning ichki kartasi */
+.success-card {
+    background: var(--bg-secondary);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.8);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Oyna ochilganda kartaning kattalashishi */
+.success-overlay.active .success-card {
+    transform: scale(1);
+}
+
+.success-icon {
+    font-size: 50px;
+    color: #10b981; /* Yashil rang */
+    margin-bottom: 15px;
+    animation: popIn 0.5s ease;
+}
+
+.success-card h3 {
+    font-size: 22px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.success-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+}
+
+/* Yashil piktogramma uchun kichik animatsiya */
+@keyframes popIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
 }
